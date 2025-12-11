@@ -27,16 +27,18 @@ export const StateContext = ({ children})  => {
             quantity: cartItems.quantity + quantity
 
         }
+        return cartItems;
      })
        setCartItems(updatedCartItems);
-       toast.success(`${qty} ${product.name} added to the cart.`);
+       toast.success(`${quantity} ${product.name} added to the cart.`);
         } else {
             setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity);
             setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
             product.quantity = quantity;
             setCartItems([...cartItems, { ...product }]);
-            toast.success(`${qty} ${product.name} added to the cart.`);   
+            toast.success(`${quantity} ${product.name} added to the cart.`);   
     }
+    setQty(1);
     }
 
     const onRemove = (product) => {
@@ -90,6 +92,10 @@ export const StateContext = ({ children})  => {
                 onAdd,
                 toggleCartItemQuantity,
                 onRemove,
+                setCartItems,
+                setTotalPrice,
+                setTotalQuantities,
+
             }}
         >
             {children}
