@@ -33,8 +33,8 @@ const Cart = () => {
   };
 
   return (
-    <div className='cart-wrapper'>
-      <div className='cart-container' ref={cartRef}>
+    <div className='cart-wrapper' onClick={() => setShowCart(false)}>
+      <div className='cart-container' ref={cartRef} onClick={(e) => e.stopPropagation()}>
         <button
           type='button'
           onClick={() => setShowCart(false)}
