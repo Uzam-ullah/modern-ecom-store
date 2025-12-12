@@ -171,6 +171,7 @@ width: 100%;
   right:20%;
   width: 450px;
   height: 450px;
+  object-fit: contain;
 }
 
 
@@ -630,21 +631,22 @@ margin-top: 160px;
     padding: 0 15px;
   }
   .hero-banner-container{
-    height: 560px;
-    padding: 100px 20px;
+    height: 520px;
+    padding: 95px 15px;
     margin-left: auto;
     margin-right: auto;
   }
   .hero-banner-image{
-    width: 77%;
-    height: 62%;
-    top: 0%;
+    width: 76%;
+    height: 60%;
+    top: 25%;
     right: -10%;
+    object-fit: contain;
   }
   .footer-banner-container{
-    height: 560px;
+    height: 520px;
     margin-top: 80px;
-    padding: 100px 15px;
+    padding: 95px 15px;
     margin-left: auto;
     margin-right: auto;
   }
